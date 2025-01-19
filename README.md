@@ -20,5 +20,5 @@ Or you can integrate it with OpenAI and it allows you to analyze your GitHub pro
 
 Usage:
 ```
-node client-with-openai.js "How many commits does my mcp-client-github repo have that is under my username leartbeqiraj1?"
+node client-with-openai.js "How many commits does my openai-integration-with-mcp-server-github repo have that is under my username leartbeqiraj1?"
 ```
