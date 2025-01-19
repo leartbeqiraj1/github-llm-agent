@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.1.1"
+    "@modelcontextprotocol/sdk": "^1.1.1",
+    "dotenv": "^16.4.7",
+    "openai": "^4.79.1"
   }
 }

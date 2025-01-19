@@ -1,12 +1,15 @@
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js";
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 async function createBranch() {
   try {
     const transport = new StdioClientTransport({
-      command: "/your/path/to/mcp-server-github executable",
+      command: process.env.MCP_SERVER_PATH,
       env: {
-        GITHUB_PERSONAL_ACCESS_TOKEN: "Your GitHub Personal Access Token"
+        GITHUB_PERSONAL_ACCESS_TOKEN: process.env.GITHUB_PERSONAL_ACCESS_TOKEN
       }
     });
 
@@ -22,8 +25,8 @@ async function createBranch() {
     const createdBranch = await client.callTool({
       name: "create_branch",
       arguments: {
-        owner: "organization1", // user or organization
-        repo: "repo1" ,
+        owner: "client1-rekog", // user or organization
+        repo: "demo" ,
         branch: "branch_name1",
         from_branch: "main"
       }

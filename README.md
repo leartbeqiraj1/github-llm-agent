@@ -1,15 +1,24 @@
 # mcp-client-github
 
-1. Install mcp server for GitHub:
+* Install mcp server for GitHub:
 ```
 npm install -g @modelcontextprotocol/server-github
 ```
-2. Generate a GitHub PAT token and use it in the StdioClientTransport env
-3. Get path to the executable and replace it in the StdioClientTransport command:
+You need to configure two variables:
+1. Generate a GitHub Personal Access Token
+2. Get path to the MCP server executable (used for StdioClientTransport command):
 ```
 which mcp-server-github
 ```
-4. Run app:
+
+You can run the app on simple mode, which will call a single tool from GitHub MCP Server:
 ```
 node client.js
+```
+
+Or you can integrate it with OpenAI and it allows you to analyze your GitHub profile through AI-powered queries. 
+
+Usage:
+```
+node client-with-openai.js "How many commits does my mcp-client-github repo have that is under my username leartbeqiraj1?"
 ```
