@@ -20,7 +20,7 @@ Or you can integrate it with OpenAI and it allows you to interact with your GitH
 
 Example 1:
 ```
-node client-with-openai.js "How many commits does my openai-integration-with-mcp-server-github repo have that is under my username leartbeqiraj1?"
+node client-with-openai.js "How many commits does my github-llm-agent repo have that is under my username leartbeqiraj1?"
 ```
 
 Example 2:
