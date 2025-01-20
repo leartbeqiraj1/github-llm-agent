@@ -49,6 +49,7 @@ async function askOpenAI() {
         tools: tools,
       })
 
+      await new Promise(resolve => setTimeout(resolve, 100));
       const toolMessages = await adapter.callTool(response)
 
       messages.push(response.choices[0].message)
